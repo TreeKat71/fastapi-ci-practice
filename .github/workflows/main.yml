@@ -4,20 +4,22 @@ name: CI practice
 on:
   push:
     branches: [ $default-branch ]
+  # Can be trigger manually
   workflow_dispatch:
 
 
 jobs:
-  pylint:
+  test:
     runs-on: ubuntu-latest
     steps:
+    # Get Codebase
     - uses: actions/checkout@v2
-
+    # Setup python env
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
       with:
         python-version: "3.7"
-
+    # Install dependencies
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
