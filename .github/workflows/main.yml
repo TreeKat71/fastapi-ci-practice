@@ -36,3 +36,8 @@ jobs:
       # Test
       - name: Test with pytest
         run: pytest
+      # Build container image
+      - name: Build image
+        run: |
+          pipenv lock -r > requirements.txt
+          docker build . --file Dockerfile --tag muller-image:$(date +%s)
