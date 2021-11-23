@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi
+  labels:
+    app: fastapi
+spec:
+  clusterIP: None
+  selector:
+    app: fastapi
