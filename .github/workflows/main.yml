@@ -43,8 +43,8 @@ jobs:
       - name: Test with pytest
         run: pytest
 
-      # Dockerfile linter: Hadolint
-      - name: Security Lint with Hadolint
+      # Dockerfile Linter: Hadolint
+      - name: Dockerfile lint with Hadolint
         run: |
           wget --quiet -O hadolint https://github.com/hadolint/hadolint/releases/download/$VERSION/hadolint-Linux-x86_64
           chmod +x hadolint
@@ -58,7 +58,7 @@ jobs:
           docker build . --file Dockerfile --tag muller-image:$(date +%s)
 
       ## Kubernetes
-      - name: Yaml lint
+      - name: Kubernetes yaml lint
         run: |
           pip install yamllint
           yamllint manifests/*.yaml
