@@ -10,6 +10,7 @@ pytest = "*"
 
 [dev-packages]
 requests = "*"
+yamllint = "*"
 
 [requires]
 python_version = "3.7"

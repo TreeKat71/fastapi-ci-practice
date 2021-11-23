@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,5 +16,5 @@ spec:
         app: fastapi
     spec:
       containers:
-      - name: fastapi
-        image: myfastapi
+        - name: fastapi
+          image: myfastapi
