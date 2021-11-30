@@ -8,6 +8,8 @@ Learn FastAPI & CI
     - container image
         - dockerfile linter (hadolint)
         - build
+    - kubernetes manifests
+        - yaml lint (yamllint)
 
 
 Special thanks
