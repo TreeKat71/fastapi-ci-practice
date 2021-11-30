@@ -6,10 +6,10 @@ name = "pypi"
 [packages]
 fastapi = "*"
 uvicorn = "*"
-pytest = "*"
 
 [dev-packages]
 requests = "*"
+pytest = "*"
 yamllint = "*"
 
 [requires]
